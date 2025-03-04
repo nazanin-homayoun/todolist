@@ -2,7 +2,7 @@ import { useState } from "react";
 import { Plus } from "lucide-react";
 
 export default function App() {
-	const [status, setStatus] = useState("Completed");
+	const [status, setStatus] = useState("all");
 	const [group, setGroup] = useState("default");
 
 	return (
@@ -31,9 +31,9 @@ export default function App() {
 								value={status}
 								onChange={(e) => setStatus(e.target.value)}
 							>
-								<option value="All">Completed</option>
-								<option value="Active">Pending</option>
-								<option value="Completed">In Progress</option>
+								<option value="all">All</option>
+								<option value="active">Pending</option>
+								<option value="completed">Completed</option>
 							</select>
 						</div>
 
@@ -47,8 +47,7 @@ export default function App() {
 								value={group}
 								onChange={(e) => setGroup(e.target.value)}
 							>
-								<option value="Default">Default</option>
-								<option value="Admin">All Group</option>
+								<option value="default">Default</option>
 							</select>
 						</div>
 					</div>
